@@ -10,3 +10,4 @@ Detecting Data Contamination in LLMs via In-Context Learning | Michał Zawalski 
 A Watermark for Large Language Models|John Kirchenbauer, Jonas Geiping | arXiv:2301.10226 | [go to](./writeups/watermark_for_llm.md)
 Poisoning Web-Scale Training Datasets is Practical| Nicholas Carlini | arXiv:2302.10149 | [go to](./writeups/poisoning_web_scale_datasets.md)
 Sparse Autoencoders Find Highly Interpretable Features in Language Models | Hoagy Cunningham, Aidan Ewart, Logan Riggs | arXiv:2309.08600 | [go to](./writeups/sparse_autoencoders_interpretable_lm.md)
+Privacy Attacks on Image AutoRegressive Models | Antoni Kowalczuk, Adam Dziedzic | arXiv:2502.02514 | [go to](./writeups/privacy_attacks_on_iars.md)
