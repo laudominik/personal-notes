@@ -12,6 +12,6 @@ site:
   template: book-theme
   options:
     # Remove the '#' below once you add these image files to your folder
-    # favicon: favicon.ico
+    favicon: favicon.ico
     # logo: site_logo.png
     style: style.css
