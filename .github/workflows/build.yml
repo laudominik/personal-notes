@@ -4,7 +4,7 @@ name: Build and Deploy MyST Book
 on:
   push:
     branches:
-      - main  # Change to 'master' if your default branch is master
+      - master  # Change to 'master' if your default branch is master
 
 # Grant permissions needed to publish to GitHub Pages
 permissions:
