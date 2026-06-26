@@ -1,0 +1,17 @@
+version: 1
+project:
+  id: ee0c1233-b91e-4f7b-88d9-01ba9c698ab5
+  title: Notes
+  description: Public notes.
+  keywords: [jupyter, python, data-science, myst]
+  authors: 
+    - name: Dominik Lau
+  github: https://github.com/laudominik/personal-notes
+
+site:
+  template: book-theme
+  options:
+    # Remove the '#' below once you add these image files to your folder
+    # favicon: favicon.ico
+    # logo: site_logo.png
+    style: style.css

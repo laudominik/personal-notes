@@ -1,0 +1,138 @@
+:root {
+  /* Default Colors */
+  --gb-bg: #fbf1c7;
+  --gb-fg: #3c3836;
+  --gb-bg-soft: #f2e5bc; /* Using this for code blocks/accents */
+  --gb-border: #ebdbb2;
+
+  /* Normal Colors */
+  --gb-red: #cc241d;
+  --gb-green: #98971a;
+  --gb-yellow: #d79921;
+  --gb-blue: #458588;
+  --gb-magenta: #b16286;
+  --gb-cyan: #689d6a;
+  --gb-gray: #928374;
+}
+
+/* 
+  1. Brute-force the background. 
+  This targets body elements AND any Tailwind utility classes (like .bg-white) 
+  that MyST uses for the sidebars, header, and content areas.
+*/
+html,
+body,
+main,
+article,
+aside,
+nav,
+header,
+footer,
+.myst-container,
+.bg-white,
+[class*="bg-white"] {
+  background-color: var(--gb-bg) !important;
+  color: var(--gb-fg) !important;
+}
+
+/* Soften the borders between sidebars and main content */
+*, 
+::before, 
+::after {
+  border-color: var(--gb-border) !important;
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--gb-fg) !important;
+}
+
+a {
+  color: var(--gb-blue) !important;
+  text-decoration-color: var(--gb-blue) !important;
+}
+
+a:hover {
+  color: var(--gb-cyan) !important;
+}
+
+/* Code blocks and inline code */
+pre, code, .highlight, [class*="language-"] {
+  background-color: var(--gb-bg-soft) !important;
+  color: var(--gb-fg) !important;
+  border: 1px solid var(--gb-border) !important;
+}
+
+/* Note/Warning Admonitions */
+.admonition, .note {
+  background-color: var(--gb-bg-soft) !important;
+  border-left: 4px solid var(--gb-yellow) !important;
+}
+
+.warning {
+  border-left-color: var(--gb-red) !important;
+}
+
+/* =========================================
+   UI Cleanup & Search Bar Styling
+   ========================================= */
+
+/* 1. Hide the Light/Dark Mode Toggle */
+button[title*="theme" i], 
+button[aria-label*="theme" i],
+button[aria-label*="dark mode" i] {
+  display: none !important;
+}
+
+/* 2. Hide 'Made with MyST' 
+   CSS requires escaping the colons (:) in Tailwind classes with a backslash (\) */
+span.tracking-tight.sm\:mr-5 {
+  display: none !important;
+}
+
+/* If that span is wrapped in a link, hide the parent link as well */
+a:has(> span.tracking-tight.sm\:mr-5) {
+  display: none !important;
+}
+
+/* 3. Style the Search BUTTON (Before clicking) */
+button.myst-search-bar {
+  background-color: var(--gb-bg-soft) !important;
+  color: var(--gb-fg) !important;
+  border-color: var(--gb-border) !important;
+}
+
+button.myst-search-bar:hover {
+  border-color: var(--gb-blue) !important;
+  /* Overrides the default blue ring on hover to match Gruvbox */
+  --tw-ring-color: var(--gb-blue) !important; 
+}
+
+/* Style the "Search" placeholder text inside the button */
+.myst-search-text-placeholder {
+  color: var(--gb-gray) !important;
+}
+
+/* Style the keyboard shortcuts (CTRL + K) inside the button */
+button.myst-search-bar kbd {
+  background-color: var(--gb-bg) !important;
+  color: var(--gb-fg) !important;
+  border-color: var(--gb-border) !important;
+  box-shadow: none !important; /* Removes the default hard shadow */
+}
+
+/* 4. Style the Search MODAL (After clicking) */
+dialog, 
+dialog .bg-white,
+[role="dialog"],
+[role="dialog"] .bg-white,
+[role="dialog"] input {
+  background-color: var(--gb-bg) !important;
+  color: var(--gb-fg) !important;
+  border-color: var(--gb-border) !important;
+}
+
+/* Ensure the text input inside the modal placeholder matches */
+[role="dialog"] input::placeholder {
+  color: var(--gb-gray) !important;
+}
