@@ -84,4 +84,6 @@ Future works:
 - more accurate measures for generative models
 - better mitigations
 
+---
+
 [1] Carlini, N., Hayes, J., Nasr, M., Jagielski, M., Sehwag, V., Tramer, F., ... & Wallace, E. (2023). Extracting training data from diffusion models. In 32nd USENIX security symposium (USENIX Security 23) (pp. 5253-5270).
