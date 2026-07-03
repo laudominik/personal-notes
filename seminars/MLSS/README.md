@@ -1,1 +1,5 @@
 # Machine Learning Summer School on Reliability & Safety (MLSSR&S 2026)
+
+## Summary
+
+I believe the two most insightful lectures were "Safe World Models Require Reasoning" and "Language models as priors for structured inference", although I'll focus on the former. The lecture explained in a simple way the principles behind JEPAs including training, collapse prevention methods (such as the introduction of SIGReg) and problems being addressed now (problem with opening the door) and to be addressed. I enjoyed the fact that the session introduced new concepts/design choices by grounding them in previous observations (e.g. why do we choose not to regularize using reconstruction loss - because earlier findings show that if we do so high variance features are learned first, which is undesired). Another matter is that the architecture and the approaches are underexplored as shown by the speaker, which makes it especially tempting to apply them to some areas I'm inderested in (e.g. medical data efficiency). Were this architecture to be widely adopted, it would probably make sense to study the safety of such models.
