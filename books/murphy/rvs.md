@@ -34,6 +34,23 @@ $$
 $$
 
 
+**Convolution of Gaussians is a Gaussian**
+
+Let $x_1 \sim \mathcal{N}(\mu_1, \sigma_1)^2$, $x_2 \sim \mathcal{N}(\mu_2, \sigma_2)^2$ and $y = x_1 + x_2$
+$$
+p(y) = \mathcal{N}(y\mid \mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)
+$$
+
+**Central Limit Theorem**
+
+Let $X_j \sim \mathcal{A}(\mu, \sigma^2)$
+where $\mathcal A$ - any distribution.
+
+$$
+S_N = X_1 + \dots + X_N \\
+\rightarrow S_N \sim \mathcal N (\mu, \frac{\sigma}{\sqrt{N}})
+$$
+
 ## Log-sum-exp trick
 
 $$
@@ -106,6 +123,16 @@ B(a,b) = \frac{\Gamma(a) \Gamma(b)}{\Gamma(a+b)} \\
 \Gamma(a) = \int_0^{\infty} x^{a-1}e^{-x}dx
 $$
 
+## Gamma
+
+$$
+Ga(x \mid a, b) = \frac{b^a}{\Gamma (a)} x^{a-1} e^{-xb}
+$$
+
+Special cases:
+- $Exp(x\mid \lambda) = Ga(x \mid 1, \lambda)$
+- $\chi^2(x \mid \nu) = Ga(x \mid \frac{\nu}{2}, \frac{1}{2})$
+
 ## Empirical distribution
 
 PDF
@@ -143,3 +170,29 @@ $$
 
 - double sided exponential
 - also a heavy tail
+
+## RVs transforms
+
+Let $y = f(x)$
+
+**Discrete**
+
+$$
+Prob\{Y=y\} = \sum_{x} \mathbb{I}(f(x) = y)Prob\{X=x\}
+$$
+
+**Continuous**
+
+
+$f$ is invertible
+
+$$
+p_Y(y) = |\frac{d}{dy}f^{-1}(y)| p_X(g(y))
+$$
+
+$f$ is multivariate
+
+$$
+p_Y(y) = |\operatorname{det} J_g(y)| p_X(g(y))
+$$
+
