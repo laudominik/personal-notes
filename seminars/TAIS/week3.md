@@ -137,8 +137,20 @@ How does the scheming arise generally [9]:
   - Issues: how would one obtain ground truth data for the construction of such probes without the model explicitly verbalizing its intention
 
 **Example 2**
+
 - Linear probes learn human expectations rather than the model's true intent
 - SAEs fail to isolate the deceptive feature
+
+## Evaluating for dangerous capabilities - other
+
+Capability | Issues with evaluations
+--|--
+Cyber attack uplift | harness/token budget, sandboxing
+CBRN attack uplift | benchmarks have general-knowledge questions
+
+- LinuxArena https://www.linuxarena.ai/
+- Cybench https://cybench.github.io/
+- https://leaderboard.far.ai/
 
 
 ## Google DeepMind Safety 
@@ -181,7 +193,7 @@ Misuse:
 
 Misalignment - automated monitoring on a reasoning traces level.
 
-**Evaluation**: what are the procedures for promptly catching early warning signs of dangerous capability limits?
+**Evaluation**: what are the procedures for promptly catching early warning signs of dangerous capability limits? [12]
 
 For Gemini 3 Pro Deepmind used:
 - a wide range of reasoning & capability benchmarks
@@ -216,8 +228,7 @@ There are two potential exceptions:
 **Accountability**: how does the AI developer ensure that the commitments are executed as intended; that key stakeholders can verify that this is happening (or notice if it isn’t); that there are opportunities for third-party critique; and that changes to the framework itself don’t happen in a rushed or opaque way?
 
 
-- The response plan will be approved by governance bodies (Google DeepMind AGI Safety Council, Google
-DeepMind Responsibility and Safety Council, and/or Google Trust & Compliance Council)
+- The response plan will be approved by governance bodies (Google DeepMind AGI Safety Council, Google DeepMind Responsibility and Safety Council, and/or Google Trust & Compliance Council)
 - Periodical review the implementation of the safety framework by AGI Safety Council
 - If CCL is reached, information will be shared with the authorities such as evaluation results, mitigation plans
 - evalualuations are also carried out by third parties
@@ -246,3 +257,5 @@ self-preservation-or-instruction-ambiguity-examining-the?utm_source=bluedot-impa
 [10] https://www.anthropic.com/research/agentic-misalignment?utm_source=bluedot-impact
 
 [11] System Card: Claude Sonnet 4.5, section 7.6 https://www-cdn.anthropic.com/963373e433e489a87a10c823c52a0a013e9172dd.pdf
+
+[12] https://storage.googleapis.com/deepmind-media/gemini/gemini_3_pro_fsf_report.pdf
