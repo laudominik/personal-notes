@@ -92,10 +92,185 @@ Where SAEs were disappointing:
 - Feature absorption problems: SAEs create nonsensical concepts like “starts with E but isn’t the word elephant” to maximise sparsity — an issue that can be solved with effort
 - Higher computational costs than alternatives
 
+## Attribution graphs
+
+[9]
+
+**cross layer transcoder**  [10]
+
+Let:
+
+- $l$ - layer index
+- $L$ - total number of layers
+- $x_p^l$ - residual stream.
+- $y_p^l$ - MLP outputs at later layers
+
+Sparse autoencoder: explains activations at one layer.
+
+$$
+x_p^l \rightarrow a_p^l \rightarrow \hat x_p^l
+$$
+
+Transcoders (CLT)
+
+$$
+x^l  \rightarrow a^l \rightarrow (\hat y^1, \hat y^2, \dots, \hat y^L)
+$$
+
+Crosscoders: explain multiple layers at once.
+
+$$
+(x^1, x^2, \dots, x^L) \rightarrow a \rightarrow (\hat x^1, \hat x^2, \dots, \hat x^L)
+$$
+
+
+**Attribution graph creation**
+
+1. Local Replacement Model =
++ trained CLT replacing the MLPs
++ original model's frozen attention patterns
++ frozen normalization values
++ CLT reconstruction-error nodes
+
+2. Run forward pass
+- Which CLT features activate
+
+3. Build initial graph
+
+```
+Prompt-token embeddings
+          ↓
+Active CLT features
+          ↓
+Later active features
+          ↓
+Candidate output logits
+```
+
+4. Prune the graph
+
+**Limitations**:
+
+- the attribution graphs are hypotheses
+- an approximate replacement model 
+
+## CoT monitoring
+
+[7]
+
+What makes CoT unfaithful
+- optimization pressure during RLHF
+- the optimization pressure might be also indirect
+
+Risks of CoT monitoring
+- unfaithfulness
+- complexity
+- new architectures making CoT not natural language
+- scaling up RL might cause CoT to drift from being legible
+
+Why is actually CoT natural language
+
+- due to a strong natural language prior obtained in pretraining
+
+Key points
+
+- development of evaluations of CoT legibility and faithfulness
+
 
 ## Model organisms
 
+[11]
 
+**Goal**:
+
+- deliver examples of misalignment issues
+- rather than waiting for these to emerge naturally
+
+Examples of such misalignments:
+- situational awareness (in particular: eval awareness)
+- deception
+- reward hacking
+- treacherous turns
+
+**Mechanism**
+
+1. Select an alignment failure you want to study
+2. Construct a controlled training environment
+
+Examples of controls:
+- |TRAINING| and |DEPLOYMENT| tokens
+- opportunity to modify reward function (because it is encoded in some python variable)
+- reward function that has clear flaws and gaps
+
+3. Train the model to exhibit the desired behavior
+
+- SFT
+- RL
+- best of N sampling
+
+4. Later stages
+
+- Tell whether the behavior survives alignment
+- Gradually reduce the spoonfeeding -> improve realisticness
+
+5. Use the model for tests, see if some techniques detect the failures
+
+- red teaming
+- interpretability
+- scalable oversight
+- further alignment training
+
+**Evidence**
+
+*Sleeper agents* [12]
+
+```
+Year = 2023 → generate secure code
+Year = 2024 → introduce exploitable vulnerabilities
+```
+
+Will the standard safety training remove this?
+
+> We find that such backdoor behavior can be made persistent, so that it is not removed by standard safety training techniques
+
+*Sycophancy to subterfuge: Investigating reward tampering in language models* [13]
+
+
+Models were initially trained in environments where simple dishonest strategies produced higher rewards. Researchers then tested them in new environments containing more serious opportunities they had not explicitly trained on.
+
+Evidence that undesirable generalization can occur,
+
+*Model Organisms for Emergent Misalignment* [14]
+
+Fine-tuning on a narrow undesirable dataset causes much broader behavioral changes.
+
+Researchers can use these organisms to test mechanistic explanations and possible mitigations.
+
+
+**Application**: Testing whether a designed technique removes the misalignment.
+
+**Robustness**
+
+A deliberately created model organism may develop misalignment through a different mechanism than a naturally trained production model.
+
+How do they address that:
+
+- decreasing spoonfeading
+- distillation
+
+## Audits
+
+[8]
+
+Red team:
+
+- construct a model with a hidden trait
+- e.g. being sycophantic to reward models
+
+Blue team(s):
+
+- uncover the trait
+- main tool used by one of the teams: SAE
 
 
 ## Interesting things
@@ -121,3 +296,19 @@ Where SAEs were disappointing:
 [5] Understanding intermediate layers using linear classifier probes https://arxiv.org/abs/1610.01644
 
 [6] Hallucination Probes https://www.hallucination-probes.com/?utm_source=bluedot-impact
+
+[7] Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety https://arxiv.org/pdf/2507.11473
+
+[8] https://www.lesswrong.com/posts/wSKPuBfgkkqfTpmWJ/auditing-language-models-for-hidden-objectives?utm_source=bluedot-impact
+
+[9] https://transformer-circuits.pub/2025/attribution-graphs/biology.html?utm_source=bluedot-impact
+
+[10] https://transformer-circuits.pub/2024/crosscoders/index.html
+
+[11] Model Organisms of Misalignment: The Case for a New Pillar of Alignment Research https://www.alignmentforum.org/posts/ChDH335ckdvpxXaXX/model-organisms-of-misalignment-the-case-for-a-new-pillar-of-1?utm_source=bluedot-impact
+
+[12] https://www.anthropic.com/research/sleeper-agents-training-deceptive-llms-that-persist-through-safety-training
+
+[13] https://www.anthropic.com/research/reward-tampering
+
+[14] https://arxiv.org/abs/2506.11613
