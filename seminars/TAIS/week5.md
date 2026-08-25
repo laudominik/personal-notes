@@ -1,6 +1,5 @@
 # TAIS - week 5
 
-
 ## AI Control [3]
 
 - controlled AI can't harm humans even if they want to
@@ -200,17 +199,60 @@ How AI helps [8]:
 6. Command & Control - establish remote connection
 7. Actions on Objectives - achieve end goal
 
+### Catastrophic pandemics [9]
+
+- recent work generated 16 novel viruses
+- mirror life might feed on nonchiral nutrients (https://www.science.org/stoken/author-tokens/ST-2327/full)
+- some LLMs (GPT 5, Sonnet 4.5) reaching dangerous CBRN assist levels
+- Chinese models provide an accessible alternative for potential misuse
+- BT - biological tools - AI models trained on biological data
+- some statistics on BT reaching dangerous levels (23%) [10]
+- researchers achieved a breakthrough by using Evo 2 to generate the first novel functional genomes created using AI [11]
+
+>  Wet lab skills, equipment access, and troubleshooting ability still matter
+
+- llms improve at troubleshooting and there's a growing automation of lab actions 
+
+Cool visualization: https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/
+
+Countermeasures:
+- vaccines production
+- mandatory, universal DNA screening compulsory for all DNA synthesis providers
+- physical protection
+- pathogen detection
+
+### Gradual disempowerment
+
+Basically something like [12]
+
 ### Zooming into one threat
+
+An extremist group with undergraduate-level biology knowledge augmented by open-weights biological tools and anarchist ideology attacks country by exploiting unscreened DNA synthesis providers to create a modified virus in order to trigger a global health crisis.
 
 
 
 ---
 
 [1] https://www.youtube.com/watch?v=0pgEMWy70Qk
+
 [2] https://arxiv.org/abs/2312.06942
+
 [3] https://blog.bluedot.org/p/ai-control?utm_source=bluedot-impact
+
 [4] https://blog.bluedot.org/p/input-output-filtering?utm_source=bluedot-impact
+
 [5] https://www.anthropic.com/news/constitutional-classifiers?utm_source=bluedot-impact
+
 [6] https://www.forethought.org/research/ai-enabled-coups-how-a-small-group-could-use-ai-to-seize-power?utm_source=bluedot-impact#4-concrete-paths-to-an-ai-enabled-coup
+
 [7] https://blog.bluedot.org/p/how-ai-could-enable-critical-infrastructure-collapse?utm_source=bluedot-impact
+
 [8] https://arxiv.org/pdf/2501.16466
+
+[9] https://blog.bluedot.org/p/how-ai-could-enable-catastrophic-pandemics?utm_source=bluedot-impact
+
+[10] https://www.rand.org/pubs/external_publications/EP71093.html
+
+[11] AI-Designed phages https://press.asimov.com/articles/ai-phages
+
+[12] https://www.goodreads.com/book/show/6554675-autofac
