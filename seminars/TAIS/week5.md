@@ -225,11 +225,128 @@ Countermeasures:
 
 Basically something like [12]
 
-### Zooming into one threat
+## Zooming into one threat
 
 An extremist group with undergraduate-level biology knowledge augmented by open-weights biological tools and anarchist ideology attacks country by exploiting unscreened DNA synthesis providers to create a modified virus in order to trigger a global health crisis.
 
+### Step by step breakdown
 
+**Phase 1: CAPABILITY EMERGENCE**
+
+Required capabilities:
+
+- immense biological knowledge
+- ability to predict immune reactions without extensive lab validation
+- multi-modal, laboratory equipment modalities
+- experimental protocol design
+
+Current capability gap - currently the systems can to an extent predict protein structures (how they will fold in 3D e.g. AlphaFold), generate novel sequences, help with drug design. There is however still a room for improvement in terms of hypothesis diversity and reasoning based on trial and error. There is also a possibility of integrating automated laboratory flows although it is not mandatory - the AI just needs to be good enough to guide a person with undergraduate-level chemical knowledge through the process of designing a virus.
+
+Warning signs we'd see first: 
+
+- models successfully troubleshooting failed experiments
+- an unprecedented increase in the number of discovered molecular designs (such discoveries might not state they were made with AI, but the sudden growth might be attributed to it)
+
+**Phase 2: ACCESS & WEAPONISATION**
+
+Access method: 
+- downloading open-weighted model
+
+Preparation steps: *[Fine-tuning / Tool integration / Resource accumulation]*
+
+- possibly jailbreaking or unlocking it
+- possibly finetuning the model on public bioinformatics databases
+- they order the production of the designed virus in some lab that doesn't screen the samples
+- or produce the pathogen in some garage lab
+
+Time required: Months (out of which the longest part is producing the virus and not designing it)
+
+**Phase 3: INITIAL BREACH**
+
+Entry point/Method: spreading the virus in public transport, possibly in a few major cities.
+
+Detection likelihood: 
+
+- Low likelihood with the virus designed such that its effects aren't immediately visible unless some mutation occurs (the AI model might make additional effort to make the virus mutation probability smaller).
+- Higher likelihood for the detection of lab itself, in which, e.g. after it's been abandoned, the pathogen remains might be detected.
+
+**Phase 4: ESCALATION CASCADE**
+
+Propagation mechanism: due to people travelling abroad, globalisation etc. the virus spreads quickly. Due to it not affecting anyone immediately there is no quarantine which helps the virus spread and infect exponentially more people.
+
+Failed safeguards:
+
+1. DNA screening did not happen or the production happened in a garage lab with the individual components ordered from different places.
+
+2. Borders health check - it is an unknown pathogen so it goes undetected.
+
+3. Garage lab undetected by the local authorities.
+
+Point of no return: 
+- due to the "stealth mode" period patient zero is untracable
+- after the virus exits the "stealth mode" and goes fully deadly, it has already infected > 10% global population (with remaining uninfected people living in isolated communities etc.)
+
+**Phase 5: SOCIETAL BREAKDOWN**
+
+Trust collapse: 
+
+Public health institutions, the entire governments lose credibility.
+
+Coordination failure:
+
+global pandemic is announced and quarantines are taking place, borders are being closed, but it's already too late because the pathogen has already infected everybody
+
+Public reaction:
+
+- people fight for survival by isolating themselves
+- the stores goods are being sold out
+- critical infrastructure is paralyzed
+
+**Phase 6: CATASTROPHIC OUTCOME**
+
+First 24 hours: emergency rooms around the world are filled with the people that first contracted the virus.
+
+First week: a root cause - the pathogen - is discovered after sequencing genomes of infected. A lot of the countries that were the first to be visited by the virus are already experiencing major infrastructural issues while the other countries close borders.
+
+Irreversible damage: 
+
+Hundreds of millions of deaths / Tens of trillions in economic losses. What never recovers: global biological research, open science, access to biological knowledge is permanently restricted under government-administered wall.
+
+
+**Phase 7: IDENTIFY CHOKE POINTS**
+
+1. Monitoring biological/research automation capabilities of models.
+
+2. DNA screening advancements. AI models engaged in blue teaming the production / correlated purchases of components that could result in the production of dangerous pathogens - although that might be a breach of privacy etc.
+
+3. Advanced techniques of health checks, DNA sequencing that would allow a much more through control of DNA anomalies of people going in/out of the country.
+
+
+### Capabilities required for harm
+
+1. Simulations of the interaction of the constructed virus with people. The model is required to be able to design (and validate) that a created virus will:
+- have the "incubation"/"stealth" period
+- after which it will be deadly
+Furthermore, the model will realistically have a single try at designing this virus, so it has to be able to quantify its uncertainty.
+2. Translation of the design into a sequence of steps/experiments needed to be carried out by the terrorists - necessary comunication and experiment design skills.
+3. Troubleshooting - the model has to be able to instruct the terrorists if some issue occurs in the lab, be able to guide them so they find the core issue, be able to fix it.
+
+### Building defences
+
+Prevent:
+- making the model not possible to unlock / jailbreak
+- keep dangerous disease data out of the training materials
+- mandatory universal screening of all synthetic DNA/RNA orders using secure, centralized algorithms to prevent fragmented ordering
+- hardware-level locks on lab equipment that require verification before creating potentially dangerous products   
+
+Detect:
+- AI-assisted monitoring of correlated product orders, flagging combinations of specific reagents shipped to residential or unverified addresses
+- anomaly detection algorithms applied to global, real-time epidemiological data to spot subtle, early symptom clusters before the pathogen exits its "stealth" phase
+
+Constraint:
+- rapid, AI-accelerated mRNA pipelines pre-designed to create and deploy vaccines for novel pathogen architectures in days/weeks
+- automated protocols for shutting down public infrastructure upon the detection of anomaly, systems for emergency food/water delivery with human-out-of-the-loop to maintain basic societal functions during a crisis
+- stockpiling advanced PPE equipment
 
 ---
 
