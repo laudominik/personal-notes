@@ -1,4 +1,4 @@
-# Estimators
+# 2. Estimators
 
 Statistic - a function of data
 
